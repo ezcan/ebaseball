@@ -1,0 +1,21 @@
+{
+  "name": "ebaseball",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ezcan",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.5.4",
+    "@vuepress/theme-blog": "^2.3.1",
+    "glob": "^7.1.6",
+    "node-sass": "^4.14.1",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^9.0.3",
+    "vuepress": "^1.5.3"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  }
+}
