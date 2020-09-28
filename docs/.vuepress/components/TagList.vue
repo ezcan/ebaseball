@@ -1,7 +1,7 @@
 <template lang="pug">
     .tag-list
         .tag-list-item(v-for="item of result")
-            a(:href="item.path") {{item.title}} 
+            a(:href="`..${item.path}`") {{item.title}} 
 </template>
 
 <script>

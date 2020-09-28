@@ -15,7 +15,7 @@ module.exports = {
             },
             {
                 text: 'LINE社群',
-                link: ''
+                link: 'https://line.me/ti/g2/bBgyylN25lBVn6riDkrzcQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default'
             }
         ],
         sidebarDepth: 1,
