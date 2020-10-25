@@ -1,15 +1,12 @@
 <template lang="pug">
     .container.batter-counter
         .counter-input
-            label 打擊率
-                input(v-model="avg" type="number" step="0.01" min="0" max="1" placeholder="打擊率...")
-            label 長打率
-                input(v-model="slg" type="number" step="0.01" min="0" max="1" placeholder="長打率...")
-            label 全壘打    
-                input(v-model="hr" type="number" step="1" min="0" placeholder="全壘打...")
-            label 安打
-                input(v-model="hit" type="number" step="10" min="0" placeholder="安打...")
+            v-text-field(label="打擊率" v-model="avg" type="number" step="0.01" min="0" max="1" placeholder="打擊率...")
+            v-text-field(v-model="slg" type="number" step="0.01" min="0" max="1" placeholder="長打率...")
+            v-text-field(v-model="hr" type="number" step="1" min="0" placeholder="全壘打...")
+            v-text-field(v-model="hit" type="number" step="10" min="0" placeholder="安打...")
         .counter-result
+            v-slider(min=".25" max=".35" step="0.01" ticks v-model="league_average" tick-labels="聯盟打擊率")
             .attr-rank
                 .rank-text(:class="getRank(meetCtrl)") {{getRank(meetCtrl)}}
                 .rank-value {{meetCtrl}}
@@ -28,6 +25,8 @@ export default {
             slg: .4,
             hr: 0,
             hit: 80,
+
+            league_average: .28
         }
     },
     computed: {
@@ -35,14 +34,13 @@ export default {
             return this.slg - this.avg
         },
         meetCtrl(){
-            const THRESHOLD = 0.28;
             const BONUS = 0.025;
             const MIN = 10;
             const RANK_DREGEE = 0.004;
             const BASE = 40;
             const MAX = 100;
             return Math.min( Math.max(
-                    BASE + Math.round((this.avg - THRESHOLD) / RANK_DREGEE) + 
+                    BASE + Math.round((this.avg - this.league_average) / RANK_DREGEE) + 
                     Math.round(this.hit * BONUS)
                 , MIN), MAX)
         },

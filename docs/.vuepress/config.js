@@ -6,7 +6,7 @@ module.exports = {
     lastUpdated: 'Last Updated',
     smoothScroll: true,
     base: '/ebaseball/',
-    // theme: '@vuepress/blog',
+    theme: 'vuetify',
     themeConfig: {
         nav: [
             {
@@ -20,7 +20,7 @@ module.exports = {
         ],
         sidebarDepth: 1,
         sidebar:[
-            ["/2019/", "中職30年能力查定"],
+            ["/Guardians/", "富邦悍將"],
             ["/OB/", "經典OB再現"],
             ["/漢字搜尋器", "漢字搜尋器"],
             ["/野手計算機", "野手計算機"],

@@ -1,6 +1,6 @@
 <template lang="pug">
     .character-finder
-        input(type="text" v-model="inputText")
+        v-text-field(type="text" v-model="inputText")
         .text(v-for="r of result" :key="r.text") 
             .text {{r.text}}
             .tips(v-if="!r.position.length") 查無資料
