@@ -1,7 +1,7 @@
 
 
 module.exports = {
-    title: 'EZ野球工廠',
+    title: 'EZ實況野球工廠',
     description: 'Just playing around',
     lastUpdated: 'Last Updated',
     smoothScroll: true,
