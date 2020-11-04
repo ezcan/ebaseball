@@ -20,10 +20,12 @@ module.exports = {
         ],
         sidebarDepth: 1,
         sidebar:[
+            ["/Brothers/", "中信兄弟"],
+            ["/Lions/", "統一7-ELEVEN獅"],
             ["/Guardians/", "富邦悍將"],
             ["/OB/", "經典OB再現"],
             ["/漢字搜尋器", "漢字搜尋器"],
-            ["/野手計算機", "野手計算機"],
+            // ["/野手計算機", "野手計算機"],
         ]
     },
     plugins: [
