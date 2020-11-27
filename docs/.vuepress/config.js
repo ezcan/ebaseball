@@ -21,6 +21,7 @@ module.exports = {
         sidebarDepth: 1,
         sidebar:[
             ["/Brothers/", "中信兄弟"],
+            ["/Monkeys/", "樂天桃猿"],
             ["/Lions/", "統一7-ELEVEN獅"],
             ["/Guardians/", "富邦悍將"],
             ["/OB/", "經典OB再現"],
